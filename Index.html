@@ -1,33 +1,66 @@
 <!DOCTYPE html>
 
-<html class="no-js"> 
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>People Factory</title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
-    <h1>a Person Factory</h1>
+<html class="no-js">
 
-<section>
-  <div class="special">
-      <form id="personForm"> 
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>People Factory</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+  <h1>a Person Factory</h1>
+  <h2>and Their Birthdays!</h2>
+
+  <section>
+    <div class="special">
+      <form id="personForm">
         <p>
           <label for="personName">Name</label>
-            <input type="text" name="personName">
+          <input type="text" name="personName">
         </p>
 
         <p>
+          <label for="personBday">Birthday</label>
+          <input type="text" name="personBday">
+        </p>
+
+        <p>
+          <label for="textColor">Text Color</label>
+          <input type="text" name="textColor">
+        </p>
+
+        <p>
+          <label for="backColor">Background Color</label>
+          <input type="text" name="backColor">
+        </p>
+
+        <div>
           <button type="submit">Go</button>
+        </div>
+
+        <!--<div id="changeTextBtns">
+          <div class="inner"><button type="submit" class="italicsBtn">Italics</button></div>
+          <div class="inner"><button type="submit" class="boldBtn">Bold</button></div>
+          <div class="inner"><button type="submit" class="underBtn">Underline</button></div>
+        </div>-->
+
+        <p id="P1">
+          Quisque velit nisi, pretium ut lacinia in, elementum id enim. Vivamus suscipit tortor eget felis porttitor volutpat. Nulla
+          porttitor accumsan tincidunt. Cras ultricies ligula sed magna dictum porta. Donec sollicitudin molestie malesuada.
+          Curabitur aliquet quam id dui posuere blandit. Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem.
+          Donec rutrum congue leo eget malesuada. Curabitur aliquet quam id dui posuere blandit. Vestibulum ac diam sit amet
+          quam vehicula elementum sed sit amet dui.
         </p>
 
       </form>
-  </div>
-</section>
+    </div>
+  </section>
 
-<script src="index.js"></script>
-  </body>
+  <script src="index.js"></script>
+</body>
+
 </html>
-
