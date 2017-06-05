@@ -1,11 +1,23 @@
+//References:
 const personForm = document.querySelector('form#personForm')
-// const submitBtn = document.querySelector('#submitButton')
-// const italicsBtn = document.querySelector('italicsBtn')
-// const boldBtn = document.querySelector('boldBtn')
-// const underBtn = document.querySelector('underBtn')
+const italicsBtn = document.querySelector('.italicsBtn')
+const boldBtn = document.querySelector('.boldBtn')
+const underBtn = document.querySelector('.underBtn')
+const resetBtn = document.querySelector('.resetBtn')
+
+//Booleans
+var italicClicked = false
+var boldClicked = false
+var underlineClicked = false
 
 
-function handleSubmit(ev){
+
+/**
+ * Method to handle the submitting of form via a button
+ * 
+ * @param {*} ev 
+ */
+function handleSubmit(ev) {
     ev.preventDefault()
     const f = ev.target
     const name = f.personName.value
@@ -15,28 +27,76 @@ function handleSubmit(ev){
 
     document.querySelector('h1').textContent = name
     document.querySelector('h2').textContent = bday
+
     document.querySelector('#P1').style.color = textColor
+    document.querySelector('h1').style.color = textColor
+    document.querySelector('h2').style.color = textColor
+
     document.bgColor = backColor
 }
 
-// function handleItalic(ev){
-//     ev.preventDefault()
-//     document.querySelector('#P1').style.font = "italic"
-// }
+/**
+ * Method to handle the italicizing of text via a button
+ * 
+ * @param {*} ev 
+ */
+function handleItalic(ev) {
 
-// function handleBold(ev){
-//     ev.preventDefault()
-//     document.querySelector('#P1').style.font = "bold"
-// }
+    if (italicClicked == true) {
+        document.querySelector('#P1').style.fontStyle = "normal"
+        italicClicked = false
 
-// function handleUnderline(ev){
-//     ev.preventDefault()
-//     document.querySelector('#P1').style.font = "underline"
-// }
+    } else {
+
+        document.querySelector('#P1').style.fontStyle = "italic"
+        italicClicked = true
+    }
+}
+
+/**
+ * Method to handle the bolding of text via a button
+ * 
+ * @param {*} ev 
+ */
+function handleBold(ev) {
+
+    if (boldClicked == true) {
+        document.querySelector('#P1').style.fontWeight = "normal"
+        boldClicked = false
+
+    } else {
+
+        document.querySelector('#P1').style.fontWeight = "bold"
+        boldClicked = true
+    }
+
+}
+
+/**
+ * Method to handle the underlining of text via a button
+ * 
+ * @param {*} ev 
+ */
+function handleUnderline(ev) {
+
+    if (underlineClicked == true) {
+        document.querySelector('#P1').style.textDecoration = "none"
+        underlineClicked = false
+
+    } else {
+
+        document.querySelector('#P1').style.textDecoration = "underline"
+        underlineClicked = true
+    }
+}
+
+
+//Action listeners for each button that call the appropriate method
 
 personForm.addEventListener('submit', handleSubmit)
-// italicsBtn.addEventListener('submit', handleItalic)
-// boldBtn.addEventListener('submit', handleBold)
-// underBtn.addEventListener('submit', handleUnderline)
+italicsBtn.addEventListener('click', handleItalic)
+boldBtn.addEventListener('click', handleBold)
+underBtn.addEventListener('click', handleUnderline)
+
 
 
