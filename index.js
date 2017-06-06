@@ -25,15 +25,27 @@ function handleSubmit(ev) {
     const textColor = f.textColor.value
     const backColor = f.backColor.value
     const details = document.querySelector('#details')
+    const favoriteColor = f.favoriteColor.value
+    const age = f.age.value
 
     //Other way to make a text object in line
     // details.innerHTML = `<em>${name}</em>`
 
     //Creating an elemnt in pure js:
-    const em = document.createElement('em')
-    em.textContent = name
+    // const em = document.createElement('em')
+    // em.textContent = name
+    // details.appendChild(em)
 
-    details.appendChild(em)
+
+    // Inner details list displayed at the bottom of the page
+    details.innerHTML = `
+        <ul>
+            <li>Name: ${name} </li>
+            <li> Favorite Color: ${favoriteColor}</li>
+            <li>Age: ${age}</li>
+    
+    `
+
 
     document.querySelector('h1').textContent = name
     document.querySelector('h2').textContent = bday
