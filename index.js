@@ -26,7 +26,14 @@ function handleSubmit(ev) {
     const backColor = f.backColor.value
     const details = document.querySelector('#details')
 
-    details.innerHTML = `<em>${name}</em>`
+    //Other way to make a text object in line
+    // details.innerHTML = `<em>${name}</em>`
+
+    //Creating an elemnt in pure js:
+    const em = document.createElement('em')
+    em.textContent = name
+
+    details.appendChild(em)
 
     document.querySelector('h1').textContent = name
     document.querySelector('h2').textContent = bday
