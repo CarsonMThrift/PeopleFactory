@@ -19,6 +19,9 @@ var underlineClicked = false
  */
 function handleSubmit(ev) {
     ev.preventDefault()
+
+    
+
     const f = ev.target
     const name = f.personName.value
     const bday = f.personBday.value
@@ -126,5 +129,11 @@ italicsBtn.addEventListener('click', handleItalic)
 boldBtn.addEventListener('click', handleBold)
 underBtn.addEventListener('click', handleUnderline)
 
+const myOBJ = {
 
-
+    name: 'whatevs',
+    //Functions can be parts of objects!
+    doTheThing: function(){
+        debugger
+    }
+}
