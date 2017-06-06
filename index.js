@@ -28,6 +28,11 @@ function handleSubmit(ev) {
     const favoriteColor = f.favoriteColor.value
     const age = f.age.value
 
+    const colorDiv =`
+        <div style="background-color: ${favoriteColor}; width: 100px; height:50px;"></div>
+    `
+        
+
     //Other way to make a text object in line
     // details.innerHTML = `<em>${name}</em>`
 
@@ -42,6 +47,7 @@ function handleSubmit(ev) {
         <ul>
             <li>Name: ${name} </li>
             <li> Favorite Color: ${favoriteColor}</li>
+            <li>Color: ${colorDiv}</li>
             <li>Age: ${age}</li>
     
     `
