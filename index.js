@@ -26,7 +26,7 @@ function handleSubmit(ev) {
     const backColor = f.backColor.value
     const details = document.querySelector('#details')
 
-    details.innerHTML = '<em>' + name + '</em>'
+    details.innerHTML = `<em>${name}</em>`
 
     document.querySelector('h1').textContent = name
     document.querySelector('h2').textContent = bday
